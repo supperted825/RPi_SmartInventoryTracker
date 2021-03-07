@@ -2,8 +2,7 @@ import random
 import time
 from azure.iot.device import IoTHubDeviceClient, Message
 
-#CONNECTION_STRING = "2DmUEtae0rAgcT37KoUOmjzDjoKcnsZPjskEp9WR01i69B62HkHOxgmaZgRU24foWgh5+wY3wXwCqizzhhqRwA=="
-CONNECTION_STRING = "HostName=iotc-63d32082-e94b-4f92-9aa1-3bd1635dd1c1.azure-devices.net;DeviceId=RPi26ly4vvdzqt;SharedAccessKey=kACc5Wugca7Fq1SFcymvJfpJjoZE74AuxGKCk/HGHc0="  
+CONNECTION_STRING = "YOUR CONNECTION STRING"  
 
 def output_to_dict(result_path):
     # Parse the result.txt file from the command line call
@@ -19,7 +18,8 @@ def output_to_dict(result_path):
                 output.append(result[0])
             if "./img.jpg" in line:
                 begin = True
-
+    
+    # Replace the keys with your class names
     count_items = {"Egg" : 0,
                 "Milk" : 0,
                 "Yoghurt": 0}
